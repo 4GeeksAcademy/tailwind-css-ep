@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Metrics | Alba Vega</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --font-sans: "Nunito", ui-rounded, sans-serif;
+            --color-page: #F2F1F6;
+            --color-brand: #5B5677;
+            --color-line: #dedce6;
+            --radius-panel: 0.5rem;
+        }
+        @utility report-surface {
+            @apply rounded-panel border border-line bg-white;
+        }
+        @utility report-status {
+            @apply inline-flex items-center rounded px-2 py-1 text-xs font-bold;
+        }
+        @utility report-positive {
+            @apply bg-emerald-50 text-emerald-800;
+        }
+        @utility report-negative {
+            @apply bg-rose-50 text-rose-800;
+        }
+        @utility report-neutral {
+            @apply bg-zinc-100 text-zinc-700;
+        }
+    </style>
+</head>
+<body class="bg-page font-sans text-base leading-relaxed text-zinc-900 antialiased">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-panel focus:bg-white focus:px-4 focus:py-3 focus:text-brand focus:outline-2 focus:outline-offset-4 focus:outline-brand">Saltar al contenido</a>
+    <div class="mx-auto w-full max-w-7xl space-y-8 px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+        <header class="space-y-5">
+            <div class="flex min-w-0 flex-wrap items-center gap-3">
+                <img src="assets/avatar-alba.webp" width="48" height="48" alt="Avatar ilustrado de Alba Vega" class="size-12 shrink-0 rounded-full border border-line bg-white object-cover">
+                <div class="min-w-0">
+                    <p class="text-sm font-bold text-brand">Alba Vega</p>
+                    <h1 class="text-2xl leading-tight font-extrabold">Studio Metrics</h1>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-zinc-600">
+                <p><time datetime="2026-09-01">1</time>–<time datetime="2026-09-30">30 de septiembre de 2026</time></p>
+                <p class="font-semibold text-brand">Datos de demostración</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <button type="button" disabled aria-describedby="estado-acciones" class="min-h-11 rounded-panel border border-line bg-white px-4 py-2 text-sm font-bold text-zinc-500 disabled:cursor-not-allowed">Descargar informe</button>
+                <button type="button" disabled aria-describedby="estado-acciones" class="min-h-11 rounded-panel bg-brand px-4 py-2 text-sm font-bold text-white disabled:cursor-not-allowed">Nueva campaña</button>
+            </div>
+            <p id="estado-acciones" class="text-xs text-zinc-600">No disponible: la descarga de informes y la creación de campañas no están habilitadas en este reporte de demostración.</p>
+            <nav aria-label="Secciones del informe" class="flex flex-wrap gap-2 border-b border-line pb-3 text-sm font-bold">
+                <a href="#resultados" class="inline-flex min-h-11 items-center rounded-panel px-3 text-brand underline decoration-2 underline-offset-8 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Resultados</a>
+                <a href="#factores" class="inline-flex min-h-11 items-center rounded-panel px-3 text-brand hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Factores</a>
+                <a href="#operaciones" class="inline-flex min-h-11 items-center rounded-panel px-3 text-brand hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">Operaciones</a>
+            </nav>
+        </header>
+        <main id="contenido" tabindex="-1" class="min-w-0 space-y-10 focus:outline-none">
+            <section id="resultados" aria-labelledby="titulo-resultados" class="scroll-mt-6 space-y-5">
+                <div class="flex flex-wrap items-end justify-between gap-2">
+                    <div class="space-y-1">
+                        <h2 id="titulo-resultados" class="text-xl font-extrabold">Resultados</h2>
+                        <p class="text-sm text-zinc-600">Resumen del período · septiembre de 2026</p>
+                    </div>
+                </div>
+                <dl aria-label="Indicadores principales" class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                    <div class="report-surface flex min-h-40 min-w-0 flex-col justify-between gap-3 p-5">
+                        <dt class="text-sm font-semibold text-zinc-600">Ventas atribuidas</dt>
+                        <dd class="min-w-0 break-words text-2xl leading-tight font-extrabold tabular-nums text-zinc-900">42.500,00 €</dd>
+                        <dd class="text-xs text-zinc-600"><span class="report-status report-positive">Aumento del 12,5%</span> frente al mes anterior</dd>
+                    </div>
+                    <div class="report-surface flex min-h-40 min-w-0 flex-col justify-between gap-3 p-5">
+                        <dt class="text-sm font-semibold text-zinc-600">Comisiones de Alba</dt>
+                        <dd class="min-w-0 break-words text-2xl leading-tight font-extrabold tabular-nums text-zinc-900">6.375,00 €</dd>
+                        <dd class="text-xs text-zinc-600">Resumen de demostración</dd>
+                    </div>
+                    <div class="report-surface flex min-h-40 min-w-0 flex-col justify-between gap-3 p-5">
+                        <dt class="text-sm font-semibold text-zinc-600">Conversiones totales</dt>
+                        <dd class="min-w-0 break-words text-2xl leading-tight font-extrabold tabular-nums text-zinc-900">850</dd>
+                        <dd class="text-xs text-zinc-600">Compras del período</dd>
+                    </div>
+                    <div class="report-surface flex min-h-40 min-w-0 flex-col justify-between gap-3 p-5">
+                        <dt class="text-sm font-semibold text-zinc-600">Engagement medio</dt>
+                        <dd class="min-w-0 break-words text-2xl leading-tight font-extrabold tabular-nums text-zinc-900">7,2%</dd>
+                        <dd class="text-xs text-zinc-600"><span class="report-status report-positive">Aumento del 2,1%</span> según la fuente</dd>
+                    </div>
+                </dl>
+                <p class="text-sm text-zinc-600">Las ventas atribuidas son ingresos de las marcas. Alba recibe una comisión del <strong class="font-bold text-brand">15% por venta</strong>. Los importes de demostración no constituyen una contabilidad conciliada.</p>
+                <div class="grid min-w-0 grid-cols-1 gap-6 border-t border-line pt-6 sm:grid-cols-2 xl:grid-cols-3">
+                    <div class="min-w-0 space-y-3">
+                        <h3 class="text-sm font-extrabold text-brand">Volumen</h3>
+                        <dl class="space-y-2 text-sm">
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Inscripciones</dt><dd class="font-bold tabular-nums">320</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Usuarios activos</dt><dd class="font-bold tabular-nums">2.400</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Impresiones</dt><dd class="font-bold tabular-nums">1,8 M</dd></div>
+                        </dl>
+                    </div>
+                    <div class="min-w-0 space-y-3">
+                        <h3 class="text-sm font-extrabold text-brand">Ingresos</h3>
+                        <dl class="space-y-2 text-sm">
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">MRR de membresía ficticia</dt><dd class="font-bold tabular-nums">1.200 €</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Precio medio de venta</dt><dd class="font-bold tabular-nums">50 €</dd></div>
+                        </dl>
+                        <p class="text-xs text-zinc-600">La membresía es una actividad adicional de demostración, no un desglose de las ventas de productos.</p>
+                    </div>
+                    <div class="min-w-0 space-y-3">
+                        <h3 class="text-sm font-extrabold text-brand">Engagement y rendimiento</h3>
+                        <dl class="space-y-2 text-sm">
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Interacciones totales</dt><dd class="font-bold tabular-nums">86.400</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Conversión global</dt><dd class="font-bold tabular-nums">3,4%</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">CTR global</dt><dd class="font-bold tabular-nums">2,8%</dd></div>
+                        </dl>
+                    </div>
+                    <div class="min-w-0 space-y-3">
+                        <h3 class="text-sm font-extrabold text-brand">Retención</h3>
+                        <dl class="space-y-2 text-sm">
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Churn de membresía ficticia</dt><dd class="font-bold tabular-nums">2,3%</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Permanencia en membresía ficticia</dt><dd class="font-bold tabular-nums">8 meses</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Compleción de compra</dt><dd class="font-bold tabular-nums">68%</dd></div>
+                        </dl>
+                    </div>
+                    <div class="min-w-0 space-y-3">
+                        <h3 class="text-sm font-extrabold text-brand">Satisfacción</h3>
+                        <dl class="space-y-2 text-sm">
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Lealtad (NPS)</dt><dd class="font-bold tabular-nums">62</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Satisfacción (CSAT)</dt><dd class="font-bold tabular-nums">94%</dd></div>
+                        </dl>
+                    </div>
+                    <div class="min-w-0 space-y-3">
+                        <h3 class="text-sm font-extrabold text-brand">Eficiencia</h3>
+                        <dl class="space-y-2 text-sm">
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Coste por conversión</dt><dd class="font-bold tabular-nums">8,40 €</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Margen</dt><dd class="font-bold tabular-nums">72%</dd></div>
+                            <div class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-zinc-600">Tiempo hasta la compra</dt><dd class="font-bold tabular-nums">2,4 días</dd></div>
+                        </dl>
+                    </div>
+                </div>
+                <dl aria-label="Contexto de audiencia" class="border-t border-line pt-5 text-sm">
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+                        <dt class="font-semibold text-zinc-600">Impacto en la audiencia</dt>
+                        <dd class="font-bold tabular-nums">4,82%</dd>
+                        <dd><span class="report-status report-negative">Descenso del 0,4%</span></dd>
+                        <dd class="w-full text-xs text-zinc-600">Definición no facilitada por la fuente. Este indicador no representa la tasa de conversión.</dd>
+                    </div>
+                </dl>
+            </section>
+            <section id="factores" aria-labelledby="titulo-factores" class="scroll-mt-6 space-y-5 border-t border-line pt-8">
+                <div class="flex flex-wrap items-end justify-between gap-2">
+                    <div class="space-y-1">
+                        <h2 id="titulo-factores" class="text-xl font-extrabold">Factores del resultado</h2>
+                        <p class="text-sm text-zinc-600">Plataformas, productos y actividad</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-base font-extrabold">Recorrido hasta la compra</h3>
+                    <ol aria-label="Etapas del funnel" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                        <li class="border-l-2 border-brand pl-4">
+                            <dl class="space-y-1">
+                                <dt class="text-sm text-zinc-600">Personas alcanzadas</dt>
+                                <dd class="text-xl font-extrabold tabular-nums">250.000</dd>
+                            </dl>
+                        </li>
+                        <li class="border-l-2 border-brand pl-4"><dl class="space-y-1"><dt class="text-sm text-zinc-600">Visitas</dt><dd class="text-xl font-extrabold tabular-nums">25.000</dd></dl></li>
+                        <li class="border-l-2 border-brand pl-4"><dl class="space-y-1"><dt class="text-sm text-zinc-600">Carritos</dt><dd class="text-xl font-extrabold tabular-nums">1.250</dd></dl></li>
+                        <li class="border-l-2 border-brand pl-4"><dl class="space-y-1"><dt class="text-sm text-zinc-600">Compras</dt><dd class="text-xl font-extrabold tabular-nums">850</dd></dl></li>
+                    </ol>
+                    <p class="text-xs text-zinc-600">Alcance de demostración; no representa una audiencia única deduplicada entre plataformas.</p>
+                </div>
+                <div class="space-y-4 border-t border-line pt-6">
+                    <h3 class="text-base font-extrabold">Rendimiento por plataforma</h3>
+                    <div id="comparativas-plataformas" class="grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-3">
+                        <figure id="ingresos-plataformas" class="min-w-0 space-y-4">
+                            <figcaption class="text-sm font-bold">Ingresos atribuidos y participación</figcaption>
+                            <p class="text-xs text-zinc-600">Barras de participación · escala de 0 a 100%</p>
+                            <ul class="space-y-4 text-sm">
+                                <li class="space-y-2">
+                                    <div class="flex flex-wrap justify-between gap-2"><span>Instagram</span><span class="font-bold tabular-nums">22.100 € · 52%</span></div>
+                                    <div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[52%] rounded bg-rose-600"></div></div>
+                                </li>
+                                <li class="space-y-2">
+                                    <div class="flex flex-wrap justify-between gap-2"><span>TikTok</span><span class="font-bold tabular-nums">14.450 € · 34%</span></div>
+                                    <div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[34%] rounded bg-zinc-800"></div></div>
+                                </li>
+                                <li class="space-y-2">
+                                    <div class="flex flex-wrap justify-between gap-2"><span>YouTube</span><span class="font-bold tabular-nums">5.950 € · 14%</span></div>
+                                    <div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[14%] rounded bg-red-600"></div></div>
+                                </li>
+                            </ul>
+                        </figure>
+                        <figure id="engagement-plataformas" class="min-w-0 space-y-4">
+                            <figcaption class="text-sm font-bold">Engagement por plataforma</figcaption>
+                            <p class="text-xs text-zinc-600">Escala de 0 a 10%</p>
+                            <ul class="space-y-4 text-sm">
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Instagram</span><span class="font-bold tabular-nums">8,1%</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[81%] rounded bg-rose-600"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>TikTok</span><span class="font-bold tabular-nums">7,6%</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[76%] rounded bg-zinc-800"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>YouTube</span><span class="font-bold tabular-nums">5,2%</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[52%] rounded bg-red-600"></div></div></li>
+                            </ul>
+                        </figure>
+                        <figure id="roi-plataformas" class="min-w-0 space-y-4">
+                            <figcaption class="text-sm font-bold">Retorno por plataforma (ROI)</figcaption>
+                            <p class="text-xs text-zinc-600">Escala de 0 a 10x</p>
+                            <ul class="space-y-4 text-sm">
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Instagram</span><span class="font-bold tabular-nums">6,4x</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[64%] rounded bg-rose-600"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>TikTok</span><span class="font-bold tabular-nums">5,8x</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[58%] rounded bg-zinc-800"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>YouTube</span><span class="font-bold tabular-nums">4,2x</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[42%] rounded bg-red-600"></div></div></li>
+                            </ul>
+                        </figure>
+                    </div>
+                </div>
+                <div class="space-y-4 border-t border-line pt-6">
+                    <h3 class="text-base font-extrabold">Rendimiento por producto</h3>
+                    <div id="comparativas-productos" class="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+                        <figure id="ingresos-productos" class="min-w-0 space-y-4">
+                            <figcaption class="text-sm font-bold">Ingresos de las marcas</figcaption>
+                            <p class="text-xs text-zinc-600">Escala de 0 a 20.000 €</p>
+                            <ul class="space-y-4 text-sm">
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto A</span><span class="font-bold tabular-nums">15.200 €</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[76%] rounded bg-brand"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto B</span><span class="font-bold tabular-nums">18.500 €</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[92.5%] rounded bg-brand"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto C</span><span class="font-bold tabular-nums">8.800 €</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[44%] rounded bg-brand"></div></div></li>
+                            </ul>
+                        </figure>
+                        <figure id="comisiones-productos" class="min-w-0 space-y-4">
+                            <figcaption class="text-sm font-bold">Comisiones de Alba</figcaption>
+                            <p class="text-xs text-zinc-600">Escala de 0 a 3.000 €</p>
+                            <ul class="space-y-4 text-sm">
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto A</span><span class="font-bold tabular-nums">2.280 €</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[76%] rounded bg-emerald-700"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto B</span><span class="font-bold tabular-nums">2.775 €</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[92.5%] rounded bg-emerald-700"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto C</span><span class="font-bold tabular-nums">1.320 €</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[44%] rounded bg-emerald-700"></div></div></li>
+                            </ul>
+                        </figure>
+                        <figure id="conversion-productos" class="min-w-0 space-y-4">
+                            <figcaption class="text-sm font-bold">Tasa de conversión</figcaption>
+                            <p class="text-xs text-zinc-600">Escala de 0 a 10%</p>
+                            <ul class="space-y-4 text-sm">
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto A</span><span class="font-bold tabular-nums">5,2%</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[52%] rounded bg-sky-700"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto B</span><span class="font-bold tabular-nums">4,1%</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[41%] rounded bg-sky-700"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto C</span><span class="font-bold tabular-nums">3,8%</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[38%] rounded bg-sky-700"></div></div></li>
+                            </ul>
+                        </figure>
+                        <figure id="engagement-productos" class="min-w-0 space-y-4">
+                            <figcaption class="text-sm font-bold">Engagement por producto</figcaption>
+                            <p class="text-xs text-zinc-600">Escala de 0 a 10%</p>
+                            <ul class="space-y-4 text-sm">
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto A</span><span class="font-bold tabular-nums">8,4%</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[84%] rounded bg-amber-700"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto B</span><span class="font-bold tabular-nums">7,6%</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[76%] rounded bg-amber-700"></div></div></li>
+                                <li class="space-y-2"><div class="flex flex-wrap justify-between gap-2"><span>Producto C</span><span class="font-bold tabular-nums">5,9%</span></div><div aria-hidden="true" class="h-2 overflow-hidden rounded bg-zinc-200"><div class="h-full w-[59%] rounded bg-amber-700"></div></div></li>
+                            </ul>
+                        </figure>
+                    </div>
+                </div>
+                <div class="space-y-4 border-t border-line pt-6">
+                    <h3 class="text-base font-extrabold">Calidad de las oportunidades</h3>
+                    <dl class="grid grid-cols-1 gap-5 text-sm sm:grid-cols-3">
+                        <div class="space-y-1"><dt class="text-zinc-600">Leads cualificados</dt><dd class="text-xl font-extrabold tabular-nums">64%</dd></div>
+                        <div class="space-y-1"><dt class="text-zinc-600">Asistencia al directo promocional</dt><dd class="text-xl font-extrabold tabular-nums">73%</dd></div>
+                        <div class="space-y-1"><dt class="text-zinc-600">Aprobación de solicitudes de colaboración</dt><dd class="text-xl font-extrabold tabular-nums">88%</dd></div>
+                    </dl>
+                </div>
+                <div class="space-y-4 border-t border-line pt-6">
+                    <h3 class="text-base font-extrabold">Actividad e interacciones</h3>
+                    <div class="grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-3">
+                        <div id="actividad-instagram" class="min-w-0 space-y-3">
+                            <h4 class="text-sm font-extrabold text-rose-700">Instagram</h4>
+                            <p class="text-sm text-zinc-600">8 publicaciones · 24 stories · 6 reels</p>
+                            <dl class="space-y-2 text-sm">
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Me gusta</dt><dd class="font-bold tabular-nums">24.000</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Comentarios</dt><dd class="font-bold tabular-nums">2.100</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Compartidos</dt><dd class="font-bold tabular-nums">1.200</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Guardados</dt><dd class="font-bold tabular-nums">4.500</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Clics</dt><dd class="font-bold tabular-nums">45,2 mil</dd></div>
+                            </dl>
+                        </div>
+                        <div id="actividad-tiktok" class="min-w-0 space-y-3">
+                            <h4 class="text-sm font-extrabold">TikTok</h4>
+                            <p class="text-sm text-zinc-600">12 vídeos</p>
+                            <dl class="space-y-2 text-sm">
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Me gusta</dt><dd class="font-bold tabular-nums">36.000</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Comentarios</dt><dd class="font-bold tabular-nums">3.400</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Compartidos</dt><dd class="font-bold tabular-nums">5.600</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Guardados</dt><dd class="font-bold tabular-nums">2.800</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Visualizaciones</dt><dd class="font-bold tabular-nums">890 mil</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Compleción de vídeo</dt><dd class="font-bold tabular-nums">42%</dd></div>
+                            </dl>
+                        </div>
+                        <div id="actividad-youtube" class="min-w-0 space-y-3">
+                            <h4 class="text-sm font-extrabold text-red-700">YouTube</h4>
+                            <p class="text-sm text-zinc-600">4 vídeos · 6 shorts</p>
+                            <dl class="space-y-2 text-sm">
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Me gusta</dt><dd class="font-bold tabular-nums">4.100</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Comentarios</dt><dd class="font-bold tabular-nums">900</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Compartidos</dt><dd class="font-bold tabular-nums">600</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Guardados</dt><dd class="font-bold tabular-nums">1.200</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>Visualización media</dt><dd class="font-bold tabular-nums">4 min 12 s</dd></div>
+                                <div class="flex flex-wrap justify-between gap-2"><dt>CTR</dt><dd class="font-bold tabular-nums">2,8%</dd></div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-xs text-zinc-600">
+                        <p>Variaciones reportadas en la captura; la métrica de crecimiento no está identificada.</p>
+                        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+                            <li>Instagram: crecimiento del 18%</li>
+                            <li>TikTok: crecimiento del 32%</li>
+                            <li>YouTube: descenso del 2%</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="operaciones" aria-labelledby="titulo-operaciones" class="scroll-mt-6 space-y-5 border-t border-line pt-8">
+                <div class="flex flex-wrap items-end justify-between gap-2">
+                    <div class="space-y-1">
+                        <h2 id="titulo-operaciones" class="text-xl font-extrabold">Detalle operacional</h2>
+                        <p class="text-sm text-zinc-600">Productos, campañas y oportunidades</p>
+                    </div>
+                </div>
+                <fieldset class="min-w-0">
+                    <legend class="mb-3 text-sm font-bold">Filtros del reporte</legend>
+                    <div class="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                        <div class="min-w-0 space-y-1">
+                            <label for="filtro-periodo" class="block text-xs font-semibold text-zinc-600">Período</label>
+                            <select id="filtro-periodo" disabled aria-describedby="ayuda-filtros" class="min-h-11 w-full min-w-0 rounded-panel border border-line bg-white px-3 py-2 text-sm text-zinc-600 disabled:cursor-not-allowed disabled:opacity-100"><option selected>Septiembre de 2026</option></select>
+                        </div>
+                        <div class="min-w-0 space-y-1">
+                            <label for="filtro-plataforma" class="block text-xs font-semibold text-zinc-600">Plataforma</label>
+                            <select id="filtro-plataforma" disabled aria-describedby="ayuda-filtros" class="min-h-11 w-full min-w-0 rounded-panel border border-line bg-white px-3 py-2 text-sm text-zinc-600 disabled:cursor-not-allowed disabled:opacity-100"><option selected>Todas las plataformas</option></select>
+                        </div>
+                        <div class="min-w-0 space-y-1">
+                            <label for="filtro-producto" class="block text-xs font-semibold text-zinc-600">Producto</label>
+                            <select id="filtro-producto" disabled aria-describedby="ayuda-filtros" class="min-h-11 w-full min-w-0 rounded-panel border border-line bg-white px-3 py-2 text-sm text-zinc-600 disabled:cursor-not-allowed disabled:opacity-100"><option selected>Todos los productos</option></select>
+                        </div>
+                        <div class="min-w-0 space-y-1">
+                            <label for="filtro-estado" class="block text-xs font-semibold text-zinc-600">Estado de campaña</label>
+                            <select id="filtro-estado" disabled aria-describedby="ayuda-filtros" class="min-h-11 w-full min-w-0 rounded-panel border border-line bg-white px-3 py-2 text-sm text-zinc-600 disabled:cursor-not-allowed disabled:opacity-100"><option selected>Todos los estados</option></select>
+                        </div>
+                    </div>
+                    <p id="ayuda-filtros" class="mt-3 text-xs text-zinc-600">Filtros no disponibles en este reporte de demostración.</p>
+                </fieldset>
+                <div role="region" aria-labelledby="nombre-tabla-productos" tabindex="0" class="min-w-0 overflow-x-auto rounded-panel border border-line focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+                    <table id="tabla-productos" class="w-full min-w-[64rem] border-collapse text-left text-sm [&_td]:px-4 [&_td]:py-4 [&_td]:text-right [&_td]:whitespace-nowrap [&_td]:tabular-nums">
+                        <caption id="nombre-tabla-productos" class="bg-white p-4 text-left text-base font-extrabold">Productos afiliados</caption>
+                        <thead class="bg-white text-xs text-zinc-600">
+                            <tr>
+                                <th scope="col" class="px-4 py-3">Producto</th>
+                                <th scope="col" class="px-4 py-3 text-right">Precio</th>
+                                <th scope="col" class="px-4 py-3 text-right">Ingresos</th>
+                                <th scope="col" class="px-4 py-3 text-right">Comisión</th>
+                                <th scope="col" class="px-4 py-3 text-right">Comisiones generadas</th>
+                                <th scope="col" class="px-4 py-3 text-right">Conversiones</th>
+                                <th scope="col" class="px-4 py-3 text-right">Tasa de conversión</th>
+                                <th scope="col" class="px-4 py-3 text-right">Engagement</th>
+                                <th scope="col" class="px-4 py-3 text-right">ROI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-line bg-white">
+                            <tr class="hover:bg-zinc-50">
+                                <th scope="row" class="px-4 py-4 font-bold">Producto A<span class="block text-xs font-normal text-zinc-600">Cuidado de la piel</span></th>
+                                <td>50 €</td><td>15.200 €</td><td>15%</td><td>2.280 €</td><td>300</td><td>5,2%</td><td>8,4%</td><td>5,6x</td>
+                            </tr>
+                            <tr class="hover:bg-zinc-50">
+                                <th scope="row" class="px-4 py-4 font-bold">Producto B<span class="block text-xs font-normal text-zinc-600">Moda</span></th>
+                                <td>120 €</td><td>18.500 €</td><td>15%</td><td>2.775 €</td><td>350</td><td>4,1%</td><td>7,6%</td><td>6,8x</td>
+                            </tr>
+                            <tr class="hover:bg-zinc-50">
+                                <th scope="row" class="px-4 py-4 font-bold">Producto C<span class="block text-xs font-normal text-zinc-600">Accesorios</span></th>
+                                <td>80 €</td><td>8.800 €</td><td>15%</td><td>1.320 €</td><td>200</td><td>3,8%</td><td>5,9%</td><td>4,1x</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div role="region" aria-labelledby="nombre-tabla-plataformas" tabindex="0" class="min-w-0 overflow-x-auto rounded-panel border border-line focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+                    <table id="tabla-plataformas" class="w-full min-w-[46rem] border-collapse text-left text-sm [&_td]:px-4 [&_td]:py-4 [&_td]:text-right [&_td]:whitespace-nowrap [&_td]:tabular-nums">
+                        <caption id="nombre-tabla-plataformas" class="bg-white p-4 text-left text-base font-extrabold">Plataformas<span class="mt-1 block text-xs font-normal text-zinc-600">Instagram lidera ingresos, engagement, conversiones y ROI entre las tres redes.</span></caption>
+                        <thead class="bg-white text-xs text-zinc-600">
+                            <tr>
+                                <th scope="col" class="px-4 py-3">Plataforma</th>
+                                <th scope="col" class="px-4 py-3 text-right">Alcance</th>
+                                <th scope="col" class="px-4 py-3 text-right">Ingresos</th>
+                                <th scope="col" class="px-4 py-3 text-right">Engagement</th>
+                                <th scope="col" class="px-4 py-3 text-right">Conversiones</th>
+                                <th scope="col" class="px-4 py-3 text-right">ROI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-line bg-white">
+                            <tr class="hover:bg-zinc-50"><th scope="row" class="px-4 py-4 font-bold">Instagram</th><td>130.000</td><td>22.100 €</td><td>8,1%</td><td>420</td><td>6,4x</td></tr>
+                            <tr class="hover:bg-zinc-50"><th scope="row" class="px-4 py-4 font-bold">TikTok</th><td>85.000</td><td>14.450 €</td><td>7,6%</td><td>290</td><td>5,8x</td></tr>
+                            <tr class="hover:bg-zinc-50"><th scope="row" class="px-4 py-4 font-bold">YouTube</th><td>35.000</td><td>5.950 €</td><td>5,2%</td><td>140</td><td>4,2x</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div role="region" aria-labelledby="nombre-tabla-campanas" tabindex="0" class="min-w-0 overflow-x-auto rounded-panel border border-line focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+                    <table id="tabla-campanas" class="w-full min-w-[76rem] border-collapse text-left text-sm [&_td]:px-4 [&_td]:py-4 [&_td]:whitespace-nowrap">
+                        <caption id="nombre-tabla-campanas" class="bg-white p-4 text-left text-base font-extrabold">Colaboraciones con marcas<span class="mt-1 block text-xs font-normal text-zinc-600">Septiembre de 2026</span></caption>
+                        <thead class="bg-white text-xs text-zinc-600">
+                            <tr>
+                                <th scope="col" class="px-4 py-3">Marca</th>
+                                <th scope="col" class="px-4 py-3">Campaña</th>
+                                <th scope="col" class="px-4 py-3">Fechas</th>
+                                <th scope="col" class="px-4 py-3">Producto</th>
+                                <th scope="col" class="px-4 py-3">Estado</th>
+                                <th scope="col" class="px-4 py-3 text-right">Seguidores</th>
+                                <th scope="col" class="px-4 py-3 text-right">Ingresos</th>
+                                <th scope="col" class="px-4 py-3 text-right">Pago a Alba</th>
+                                <th scope="col" class="px-4 py-3 text-right">ROI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-line bg-white">
+                            <tr class="hover:bg-zinc-50">
+                                <th scope="row" class="px-4 py-4 font-bold">Luxe Skincare</th>
+                                <td>Summer Campaign</td><td><time datetime="2026-09-01">1 sep.</time>–<time datetime="2026-09-30">30 sep.</time></td><td>Producto A</td><td><span class="report-status report-positive">Activa</span></td>
+                                <td class="text-right tabular-nums">245 mil</td><td class="text-right tabular-nums">12.400,00 €</td><td class="text-right font-bold text-brand tabular-nums">1.860,00 €</td><td class="text-right font-bold text-emerald-800 tabular-nums">6,2x</td>
+                            </tr>
+                            <tr class="hover:bg-zinc-50">
+                                <th scope="row" class="px-4 py-4 font-bold">Urban Apparel</th>
+                                <td>Fall Collection</td><td><time datetime="2026-09-05">5 sep.</time>–<time datetime="2026-09-30">30 sep.</time></td><td>Producto B</td><td><span class="report-status report-positive">Activa</span></td>
+                                <td class="text-right tabular-nums">82 mil</td><td class="text-right tabular-nums">4.200,00 €</td><td class="text-right font-bold text-brand tabular-nums">630,00 €</td><td class="text-right font-bold text-emerald-800 tabular-nums">4,8x</td>
+                            </tr>
+                            <tr class="hover:bg-zinc-50">
+                                <th scope="row" class="px-4 py-4 font-bold">Tech Gadgets</th>
+                                <td>Review Video</td><td><time datetime="2026-09-10">10 sep.</time>–<time datetime="2026-09-20">20 sep.</time></td><td>Producto C</td><td><span class="report-status report-neutral">Pausada</span></td>
+                                <td class="text-right tabular-nums">1,2 M</td><td class="text-right tabular-nums">21.900,00 €</td><td class="text-right font-bold text-brand tabular-nums">3.285,00 €</td><td class="text-right font-bold text-emerald-800 tabular-nums">5,4x</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="space-y-4 border-t border-line pt-6">
+                    <h3 class="text-base font-extrabold">Alertas del período</h3>
+                    <ul id="alertas-reporte" class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+                        <li class="border-l-2 border-rose-700 pl-4">
+                            <p class="text-xs font-bold text-rose-800">Atención</p>
+                            <h4 class="mt-1 text-sm font-bold">Conversión del Producto C en descenso</h4>
+                            <p class="mt-1 text-sm text-zinc-600">Revisar su ficha de producto. La magnitud de la caída no está especificada en este escenario de demostración.</p>
+                        </li>
+                        <li class="border-l-2 border-emerald-700 pl-4">
+                            <p class="text-xs font-bold text-emerald-800">Oportunidad</p>
+                            <h4 class="mt-1 text-sm font-bold">Pico de conversiones en Instagram</h4>
+                            <p class="mt-1 text-sm text-zinc-600">Revisar las publicaciones asociadas al pico. La magnitud de la subida no está especificada en este escenario de demostración.</p>
+                        </li>
+                        <li class="border-l-2 border-zinc-500 pl-4">
+                            <p class="text-xs font-bold text-zinc-700">Seguimiento</p>
+                            <h4 class="mt-1 text-sm font-bold">Review Video en pausa</h4>
+                            <p class="mt-1 text-sm text-zinc-600">La colaboración con Tech Gadgets está pausada por revisión de seguimiento.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4 border-t border-line pt-6">
+                    <h3 class="text-base font-extrabold">Destacados del período</h3>
+                    <div id="destacados-reporte" class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold text-brand">Productos</h4>
+                            <ul class="space-y-3 text-sm">
+                                <li><p class="font-bold">Producto B · líder en ingresos y conversiones totales</p><p class="text-zinc-600">18.500 € en ingresos · 350 conversiones</p></li>
+                                <li><p class="font-bold">Producto A · líder en engagement</p><p class="text-zinc-600">8,4% de engagement</p></li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold text-brand">Plataformas</h4>
+                            <ul class="space-y-3 text-sm">
+                                <li><p class="font-bold">Instagram · mejor resultado por plataforma</p><p class="text-zinc-600">Líder en ingresos, engagement, conversiones y ROI.</p><p class="font-semibold tabular-nums">22.100 € · 8,1% · 420 conversiones · 6,4x</p></li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold text-brand">Campañas</h4>
+                            <ul class="space-y-3 text-sm">
+                                <li><p class="font-bold">Summer Campaign · mejor ROI</p><p class="text-zinc-600">Luxe Skincare · Producto A</p><p class="font-semibold tabular-nums">ROI de 6,2x entre las colaboraciones</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3 border-t border-line pt-6">
+                    <h3 class="text-base font-extrabold">Oportunidades de mejora</h3>
+                    <ul class="list-disc space-y-2 pl-5 text-sm text-zinc-600 marker:text-brand">
+                        <li><strong class="font-bold text-zinc-900">Producto C:</strong> revisar la ficha del producto para abordar el descenso de conversión.</li>
+                        <li><strong class="font-bold text-zinc-900">YouTube:</strong> revisar la llamada a la acción en los vídeos.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
